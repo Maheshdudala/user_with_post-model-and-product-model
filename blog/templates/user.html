@@ -1,0 +1,11 @@
+{%extends 'base.html'%} {%block data%}
+
+{%if user.is_authenticated%}
+<h2>Welcome <span style="color: rgb(80, 35, 204);">{{user.first_name}} &nbsp;{{user.last_name}}</span></h2>
+
+
+<h2>Choose Option</h2>
+<h2><a href="post_lists">1.User Post Blog</a></h2>
+<h2><a href="pd_list/">2.Product Blog</a></h2>
+{%endif%} 
+{%endblock%}

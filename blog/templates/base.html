@@ -1,0 +1,39 @@
+<style>
+    .sidebar {
+        background-color:gold;
+        width: 150px;
+        height: 100%;
+        position:fixed;
+        left: 0;
+        top: 0;
+         
+    }
+    .sidebar a{
+        padding: 30px;
+        text-decoration: yellowgreen;
+    }
+    .sidebar a:hover{
+        color: white;
+        text-decoration:none;
+    }
+    .main {
+        padding-left: 150px;
+        background-color:none;
+    }
+</style>
+<div class ="sidebar">
+<h2><a href ="/">Home</a></h2>
+{%if user.is_authenticated%}
+<h2><a href ="logout">Logout</a></h2>
+{%else%}
+<h2><a href ="reg">Registre</a></h2>
+<h2><a href ="login">Login</a></h2>
+{%endif%}
+</div>
+<div class ="main">
+    {%block data%} 
+    {%endblock%}
+
+</div>
+
+ 

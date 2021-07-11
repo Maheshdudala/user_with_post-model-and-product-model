@@ -1,0 +1,25 @@
+
+
+{% extends 'blog1/base.html' %}
+{% block content %}
+    {% for post in posts %}
+        <article class="post">
+            <time class="date">
+              created_at:  {{ post.created_at }}<p></p>
+              updated_at:{{ post.updated_at }}
+                 <p></p>
+                 
+            </time>
+            <h2><a href="{% url 'pd1_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+
+                
+           <h4> price:{{ post.price }}</h4>
+            <h4>Weight :{{ post.weight }}</h4>
+             <p>{{ post.text|linebreaksbr }}</p>
+             
+        </article>
+        
+    {% endfor %}
+{% endblock %}
+
+    
